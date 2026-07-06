@@ -1,0 +1,343 @@
+<title>개인정보 처리방침 — 오목 (EggStoneSoft)</title>
+<style>
+  :root {
+    --bg: #F7F9FC;
+    --surface: #FFFFFF;
+    --border: #DDE3EE;
+    --text-primary: #1A2235;
+    --text-secondary: #4D5E78;
+    --text-muted: #7A88A0;
+    --accent: #2F5BE8;
+    --accent-light: #EEF2FD;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111520;
+      --surface: #1A2035;
+      --border: #2A3450;
+      --text-primary: #E8EDF8;
+      --text-secondary: #96A6C4;
+      --text-muted: #5A6A88;
+      --accent: #5E7FF0;
+      --accent-light: #1E2A48;
+    }
+  }
+  :root[data-theme="light"] {
+    --bg: #F7F9FC;
+    --surface: #FFFFFF;
+    --border: #DDE3EE;
+    --text-primary: #1A2235;
+    --text-secondary: #4D5E78;
+    --text-muted: #7A88A0;
+    --accent: #2F5BE8;
+    --accent-light: #EEF2FD;
+  }
+  :root[data-theme="dark"] {
+    --bg: #111520;
+    --surface: #1A2035;
+    --border: #2A3450;
+    --text-primary: #E8EDF8;
+    --text-secondary: #96A6C4;
+    --text-muted: #5A6A88;
+    --accent: #5E7FF0;
+    --accent-light: #1E2A48;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: -apple-system, "Apple SD Gothic Neo", BlinkMacSystemFont,
+                 "Segoe UI", "Malgun Gothic", sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 64px 24px 80px;
+  }
+
+  /* Header */
+  .doc-header {
+    margin-bottom: 48px;
+    padding-bottom: 32px;
+    border-bottom: 2px solid var(--accent);
+  }
+  .eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+  h1 {
+    margin: 0 0 12px;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--text-primary);
+    text-wrap: balance;
+  }
+  .meta {
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+  .meta span + span::before {
+    content: " · ";
+  }
+
+  /* Intro box */
+  .intro {
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 6px 6px 0;
+    padding: 16px 20px;
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 48px;
+  }
+
+  /* Sections */
+  section {
+    margin-bottom: 40px;
+  }
+  section + section {
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+  }
+  h2 {
+    margin: 0 0 14px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  h2 .num {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+    min-width: 20px;
+  }
+
+  p {
+    margin: 0 0 12px;
+    color: var(--text-secondary);
+  }
+  p:last-child { margin-bottom: 0; }
+
+  /* Table */
+  .table-wrap {
+    overflow-x: auto;
+    margin: 12px 0;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+  }
+  th {
+    background: var(--surface);
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  td {
+    padding: 11px 14px;
+    color: var(--text-secondary);
+    vertical-align: top;
+    border-bottom: 1px solid var(--border);
+  }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: var(--accent-light); }
+  td strong { color: var(--text-primary); font-weight: 600; }
+
+  /* List */
+  ul {
+    margin: 8px 0 0;
+    padding-left: 20px;
+    color: var(--text-secondary);
+  }
+  li { margin-bottom: 6px; }
+
+  /* Contact box */
+  .contact-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px 24px;
+    font-size: 14px;
+  }
+  .contact-box a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .contact-box a:hover { text-decoration: underline; }
+
+  /* Footer */
+  .doc-footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--text-muted);
+    text-align: center;
+  }
+</style>
+
+<div class="page">
+
+  <header class="doc-header">
+    <p class="eyebrow">EggStoneSoft</p>
+    <h1>개인정보 처리방침</h1>
+    <p class="meta">
+      <span>오목 (gomoku_app)</span>
+      <span>시행일: 2026년 7월 6일</span>
+    </p>
+  </header>
+
+  <div class="intro">
+    본 방침은 EggStoneSoft(이하 "회사")가 운영하는 모바일 게임 <strong>오목</strong>
+    (패키지명: com.eggstone.soft.gomoku_app)이 이용자의 개인정보를 어떻게 수집·이용·보관·파기하는지
+    설명합니다.
+  </div>
+
+  <section>
+    <h2><span class="num">01</span>수집하는 개인정보 항목</h2>
+    <p>회사는 아래 서비스 제공을 위해 최소한의 정보만 수집합니다.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>수집 항목</th>
+            <th>수집 방법</th>
+            <th>목적</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>구글 계정 이메일, 이름, 프로필 사진</strong></td>
+            <td>Google 로그인 (선택)</td>
+            <td>온라인 대전 닉네임 표시, 전적 저장</td>
+          </tr>
+          <tr>
+            <td><strong>Firebase 익명 UID</strong></td>
+            <td>자동 생성 (게스트 모드)</td>
+            <td>로그인 없이 온라인 대전 이용</td>
+          </tr>
+          <tr>
+            <td><strong>게임 전적 (승/패/무)</strong></td>
+            <td>게임 결과 자동 저장</td>
+            <td>전적 통계 표시</td>
+          </tr>
+          <tr>
+            <td><strong>광고 식별자 (GAID)</strong></td>
+            <td>Google AdMob 자동 수집</td>
+            <td>관심 기반 배너 광고 표시</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">02</span>개인정보 이용 목적</h2>
+    <ul>
+      <li>온라인 대전 서비스 제공 및 방 생성·참가 기능</li>
+      <li>이용자 식별 및 전적 저장·조회</li>
+      <li>배너 광고 표시 (앱 무료 운영 재원 마련)</li>
+      <li>서비스 개선을 위한 오류 분석 (Firebase Crashlytics)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="num">03</span>개인정보 제3자 제공 및 위탁</h2>
+    <p>회사는 이용자 동의 없이 개인정보를 외부에 제공하지 않습니다. 다만 서비스 운영을 위해 아래 업체에 처리를 위탁합니다.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>수탁업체</th>
+            <th>위탁 업무</th>
+            <th>개인정보 처리방침</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Google Firebase</strong></td>
+            <td>인증, 실시간 데이터베이스 운영</td>
+            <td>firebase.google.com/support/privacy</td>
+          </tr>
+          <tr>
+            <td><strong>Google AdMob</strong></td>
+            <td>배너 광고 제공</td>
+            <td>policies.google.com/privacy</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">04</span>개인정보 보유 및 파기</h2>
+    <p>수집 목적이 달성되면 지체 없이 파기합니다. 단, 관련 법령에 따라 일정 기간 보관이 필요한 경우 해당 기간 동안 보관 후 파기합니다.</p>
+    <ul>
+      <li><strong>계정 정보·전적:</strong> 회원 탈퇴 요청 시 즉시 파기</li>
+      <li><strong>익명 UID:</strong> 앱 삭제 또는 탈퇴 요청 시 파기</li>
+      <li><strong>광고 식별자:</strong> AdMob 정책에 따라 처리 (Google 관리)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="num">05</span>이용자의 권리</h2>
+    <p>이용자는 언제든지 아래 권리를 행사할 수 있습니다.</p>
+    <ul>
+      <li>개인정보 열람, 정정, 삭제 요청</li>
+      <li>계정 탈퇴 및 데이터 삭제 요청</li>
+      <li>개인 맞춤 광고 거부 (기기 설정 → 광고 → 광고 ID 재설정 또는 삭제)</li>
+    </ul>
+    <p>요청은 아래 연락처로 보내주시면 7일 이내 처리합니다.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">06</span>어린이 개인정보 보호</h2>
+    <p>본 앱은 만 14세 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 의도적으로 수집하지 않습니다. 아동이 개인정보를 제공한 사실을 인지한 경우 즉시 삭제 조치합니다.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">07</span>개인정보 보호책임자 및 문의</h2>
+    <div class="contact-box">
+      <p><strong>회사명:</strong> EggStoneSoft</p>
+      <p><strong>이메일:</strong> <a href="mailto:lm980022@gmail.com">lm980022@gmail.com</a></p>
+      <p style="margin-top:12px; font-size:13px; color: var(--text-muted);">
+        개인정보 관련 문의·신고는 위 이메일로 연락주시기 바랍니다.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">08</span>방침 변경 안내</h2>
+    <p>본 방침이 변경될 경우 앱 내 공지 또는 이 페이지를 통해 사전 안내합니다. 변경된 방침은 공지일로부터 7일 후 효력이 발생합니다.</p>
+  </section>
+
+  <footer class="doc-footer">
+    시행일: 2026년 7월 6일 &nbsp;·&nbsp; EggStoneSoft &nbsp;·&nbsp; com.eggstone.soft.gomoku_app
+  </footer>
+
+</div>
