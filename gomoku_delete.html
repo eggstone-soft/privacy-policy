@@ -1,0 +1,159 @@
+<title>계정 삭제 요청 — 부산오목</title>
+<style>
+  :root {
+    --bg: #F7F9FC;
+    --surface: #FFFFFF;
+    --border: #DDE3EE;
+    --text-primary: #1A2235;
+    --text-secondary: #4D5E78;
+    --text-muted: #7A88A0;
+    --accent: #2F5BE8;
+    --accent-light: #EEF2FD;
+    --danger: #D93025;
+    --danger-light: #FEF0EF;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111520;
+      --surface: #1A2035;
+      --border: #2A3450;
+      --text-primary: #E8EDF8;
+      --text-secondary: #96A6C4;
+      --text-muted: #5A6A88;
+      --accent: #5E7FF0;
+      --accent-light: #1E2A48;
+      --danger: #F28B82;
+      --danger-light: #2A1A1A;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #111520; --surface: #1A2035; --border: #2A3450;
+    --text-primary: #E8EDF8; --text-secondary: #96A6C4; --text-muted: #5A6A88;
+    --accent: #5E7FF0; --accent-light: #1E2A48;
+    --danger: #F28B82; --danger-light: #2A1A1A;
+  }
+  :root[data-theme="light"] {
+    --bg: #F7F9FC; --surface: #FFFFFF; --border: #DDE3EE;
+    --text-primary: #1A2235; --text-secondary: #4D5E78; --text-muted: #7A88A0;
+    --accent: #2F5BE8; --accent-light: #EEF2FD;
+    --danger: #D93025; --danger-light: #FEF0EF;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: -apple-system, "Apple SD Gothic Neo", BlinkMacSystemFont, "Segoe UI", "Malgun Gothic", sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page { max-width: 680px; margin: 0 auto; padding: 56px 24px 72px; }
+  .doc-header { margin-bottom: 40px; padding-bottom: 28px; border-bottom: 2px solid var(--danger); }
+  .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--danger); margin-bottom: 10px; }
+  h1 { margin: 0 0 10px; font-size: 24px; font-weight: 700; color: var(--text-primary); }
+  .meta { font-size: 13px; color: var(--text-muted); }
+  .warning-box { background: var(--danger-light); border-left: 3px solid var(--danger); border-radius: 0 6px 6px 0; padding: 14px 18px; font-size: 14px; color: var(--text-secondary); margin-bottom: 40px; }
+  section { margin-bottom: 36px; }
+  section + section { padding-top: 28px; border-top: 1px solid var(--border); }
+  h2 { margin: 0 0 14px; font-size: 15px; font-weight: 700; color: var(--text-primary); display: flex; align-items: baseline; gap: 10px; }
+  h2 .num { font-size: 11px; font-weight: 600; letter-spacing: 0.06em; color: var(--accent); font-variant-numeric: tabular-nums; }
+  p { margin: 0 0 10px; color: var(--text-secondary); }
+  p:last-child { margin-bottom: 0; }
+  .steps { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .steps li { display: flex; align-items: flex-start; gap: 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; }
+  .step-num { flex-shrink: 0; width: 24px; height: 24px; background: var(--accent); color: #fff; border-radius: 50%; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+  .step-text { color: var(--text-secondary); font-size: 14px; line-height: 1.6; }
+  .step-text strong { color: var(--text-primary); }
+  .table-wrap { overflow-x: auto; border-radius: 6px; border: 1px solid var(--border); margin-top: 12px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  th { background: var(--surface); color: var(--text-muted); font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+  td { padding: 11px 14px; color: var(--text-secondary); border-bottom: 1px solid var(--border); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: var(--accent-light); }
+  td strong { color: var(--text-primary); font-weight: 600; }
+  .tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 4px; }
+  .tag-del { background: var(--danger-light); color: var(--danger); }
+  .tag-keep { background: var(--accent-light); color: var(--accent); }
+  .contact-box { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 18px 22px; font-size: 14px; }
+  .contact-box a { color: var(--accent); text-decoration: none; }
+  .contact-box a:hover { text-decoration: underline; }
+  .doc-footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--text-muted); text-align: center; }
+</style>
+
+<div class="page">
+  <header class="doc-header">
+    <p class="eyebrow">부산오목</p>
+    <h1>계정 및 데이터 삭제 요청</h1>
+    <p class="meta">com.eggstone.soft.gomoku_app</p>
+  </header>
+
+  <div class="warning-box">
+    계정을 삭제하면 전적 기록 등 관련 데이터가 <strong>영구적으로 삭제</strong>되며 복구할 수 없습니다.
+  </div>
+
+  <section>
+    <h2><span class="num">01</span>삭제 요청 방법</h2>
+    <ul class="steps">
+      <li>
+        <span class="step-num">1</span>
+        <span class="step-text">아래 이메일 주소로 삭제 요청 메일을 보내주세요.</span>
+      </li>
+      <li>
+        <span class="step-num">2</span>
+        <span class="step-text">제목에 <strong>"계정 삭제 요청"</strong>을 입력하고, 본문에 가입 시 사용한 <strong>구글 계정 이메일</strong>을 적어주세요. (게스트 이용자는 "게스트 삭제 요청"이라고 적어주세요)</span>
+      </li>
+      <li>
+        <span class="step-num">3</span>
+        <span class="step-text">요청 수신 후 <strong>7일 이내</strong>에 처리 후 결과를 회신드립니다.</span>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="num">02</span>삭제되는 데이터</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>데이터 항목</th><th>처리</th><th>비고</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>구글 계정 정보 (이메일, 이름)</strong></td>
+            <td><span class="tag tag-del">즉시 삭제</span></td>
+            <td>Firebase 인증 계정 삭제</td>
+          </tr>
+          <tr>
+            <td><strong>게임 전적 (승/패/무)</strong></td>
+            <td><span class="tag tag-del">즉시 삭제</span></td>
+            <td>Firebase Realtime Database 삭제</td>
+          </tr>
+          <tr>
+            <td><strong>익명 UID (게스트)</strong></td>
+            <td><span class="tag tag-del">즉시 삭제</span></td>
+            <td>요청 시 삭제</td>
+          </tr>
+          <tr>
+            <td><strong>광고 식별자 (GAID)</strong></td>
+            <td><span class="tag tag-keep">Google 관리</span></td>
+            <td>기기 설정에서 직접 재설정 가능</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">03</span>문의 이메일</h2>
+    <div class="contact-box">
+      <p><strong>이메일:</strong> <a href="mailto:eggstone.soft@gmail.com">eggstone.soft@gmail.com</a></p>
+      <p style="margin-top:10px; font-size:13px; color:var(--text-muted);">
+        삭제 요청 외 개인정보 관련 문의도 위 이메일로 보내주세요.
+      </p>
+    </div>
+  </section>
+
+  <footer class="doc-footer">
+    부산오목 · com.eggstone.soft.gomoku_app · 개인 개발자
+  </footer>
+</div>
