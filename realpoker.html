@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RealPoker Privacy Policy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+    :root {
+        --bg: #f7faf8;
+        --surface: #ffffff;
+        --ink: #17261d;
+        --muted: #5d6e63;
+        --accent: #0b6e3b;
+        --line: #dce7e0;
+        --chip-bg: #e8f3ec;
+        --font-display: 'Source Serif 4', 'Noto Serif KR', serif;
+        --font-body: 'Noto Sans KR', 'Source Serif 4', sans-serif;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+            --bg: #0f1913;
+            --surface: #16231b;
+            --ink: #e6f1ea;
+            --muted: #a3b8aa;
+            --accent: #6fd49b;
+            --line: #2a3b30;
+            --chip-bg: #1d2f24;
+        }
+    }
+
+    :root[data-theme="dark"] {
+        --bg: #0f1913;
+        --surface: #16231b;
+        --ink: #e6f1ea;
+        --muted: #a3b8aa;
+        --accent: #6fd49b;
+        --line: #2a3b30;
+        --chip-bg: #1d2f24;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: var(--font-body);
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+        color: var(--accent);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 2px;
+        overflow-wrap: anywhere;
+    }
+
+    a:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+        border-radius: 2px;
+    }
+
+    .page {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 56px 16px 96px;
+    }
+
+    header.hero {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        padding-bottom: 32px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid var(--line);
+    }
+
+    .wordmark {
+        font-family: var(--font-display);
+        font-weight: 600;
+        font-size: 15px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+    }
+
+    h1 {
+        font-family: var(--font-display);
+        font-weight: 600;
+        font-size: clamp(28px, 4.5vw, 38px);
+        line-height: 1.15;
+        margin: 0;
+        text-wrap: balance;
+    }
+
+    .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 20px;
+        font-size: 14px;
+        color: var(--muted);
+        font-variant-numeric: tabular-nums;
+    }
+
+    .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 6px;
+    }
+
+    .chip {
+        font-size: 12.5px;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        color: var(--accent);
+        background: var(--chip-bg);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 5px 12px;
+    }
+
+    .langnav {
+        display: flex;
+        gap: 16px;
+        font-size: 14px;
+        margin-top: 4px;
+    }
+
+    .langnav a { font-weight: 600; }
+
+    section.lang + section.lang {
+        margin-top: 64px;
+        padding-top: 48px;
+        border-top: 1px solid var(--line);
+    }
+
+    .lang-label {
+        font-family: var(--font-display);
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 8px;
+    }
+
+    h2 {
+        font-size: 20px;
+        font-weight: 700;
+        margin: 40px 0 12px;
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+    }
+
+    h2 .num {
+        font-family: var(--font-display);
+        font-weight: 600;
+        color: var(--accent);
+        font-size: 17px;
+        font-variant-numeric: tabular-nums;
+    }
+
+    p, li { max-width: 65ch; }
+    p { margin: 0 0 14px; }
+    ul { margin: 0 0 14px; padding-left: 1.3em; }
+    li { margin-bottom: 6px; }
+
+    .card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 18px 20px;
+        margin: 18px 0;
+    }
+
+    .card p:last-child { margin-bottom: 0; }
+
+    .table-wrap { overflow-x: auto; }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 8px 0 20px;
+        font-size: 14.5px;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 10px 12px;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+    }
+
+    th {
+        font-size: 12.5px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--muted);
+        font-weight: 600;
+    }
+
+    footer {
+        margin-top: 56px;
+        padding-top: 24px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 13.5px;
+    }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header class="hero">
+            <div class="wordmark">RealPoker · 홀덤 &amp; 세븐 포커</div>
+            <h1>Privacy Policy</h1>
+            <div class="meta">
+                <span>Effective date: November 26, 2026</span>
+                <span>Developer: Eggstone Soft</span>
+                <span>Contact: eggstone.soft@gmail.com</span>
+            </div>
+            <div class="chips">
+                <span class="chip">AdMob ads</span>
+                <span class="chip">Bluetooth / Wi-Fi</span>
+                <span class="chip">Location (for nearby scan)</span>
+                <span class="chip">No account</span>
+                <span class="chip">No real money</span>
+                <span class="chip">No data sold</span>
+            </div>
+            <nav class="langnav">
+                <a href="#en">English</a>
+                <a href="#ko">한국어</a>
+            </nav>
+        </header>
+
+        <section id="en" class="lang">
+            <p class="lang-label">English</p>
+
+            <p>RealPoker ("the App") is a Texas Hold'em and Seven Poker card game developed by Eggstone Soft ("we", "us"). This policy explains what information the App handles, why, and who it is shared with. It applies to the Android version of RealPoker distributed on Google Play.</p>
+
+            <h2><span class="num">1</span> Data we do not collect</h2>
+            <p>RealPoker has no user accounts, no sign-in, no in-app purchases and no server of our own. We never receive, see or store your chips, game history, settings or the player name you enter. Chips in the App have no real-money value and cannot be bought, cashed out or exchanged for prizes.</p>
+
+            <h2><span class="num">2</span> Advertising (Google AdMob)</h2>
+            <p>The App shows banner, interstitial and optional rewarded ads served by Google AdMob. To do this, Google's SDK can collect your device's advertising identifier, IP address (from which an approximate location can be estimated), ad interactions and diagnostic information to select, show and measure ads and to prevent fraud. This is handled under Google's own privacy practices, not ours.</p>
+            <p>Where required by law (for example in the EEA and the UK), the App asks for your consent through Google's consent message before personalized ads are shown.</p>
+            <div class="card">
+                <p>Google's data practices for AdMob are described in <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">"How Google uses information from sites or apps that use our services"</a> and the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>. You can reset or delete your advertising ID in your device settings (Settings › Google › Ads).</p>
+            </div>
+
+            <h2><span class="num">3</span> Permissions and why we ask</h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr><th>Permission</th><th>Used for</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Internet</td>
+                            <td>Loading ads. Gameplay itself does not need the internet.</td>
+                        </tr>
+                        <tr>
+                            <td>Bluetooth, nearby devices (scan / advertise / connect)</td>
+                            <td>Finding and connecting to friends' phones for "Play with friends", using Google's Nearby Connections API. This feature works without the internet.</td>
+                        </tr>
+                        <tr>
+                            <td>Wi-Fi state</td>
+                            <td>Nearby Connections may use direct local Wi-Fi between phones (not a router or the internet) as a faster connection alongside Bluetooth.</td>
+                        </tr>
+                        <tr>
+                            <td>Location (approximate / precise)</td>
+                            <td>Required by Android for apps that scan for nearby Bluetooth devices. RealPoker does not read, store or send your location. The permission is only requested when you use "Play with friends".</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>During a "Play with friends" game, your player name and game actions are sent directly to the other phones in that game. Nothing about this session, your location or nearby devices is sent to us or to any third party.</p>
+
+            <h2><span class="num">4</span> Information stored only on your device</h2>
+            <p>The App saves the following on your device using Android's standard app storage, so your progress is kept between sessions:</p>
+            <ul>
+                <li>Chip balance, daily bonus streak and game statistics (hands played, win rate, biggest pot, best hand)</li>
+                <li>Settings: sound, vibration, game speed, language, table color and card back</li>
+                <li>The player name you use for "Play with friends"</li>
+            </ul>
+            <p>This information never leaves your device except as described in Section 3, and it is deleted when you uninstall the App or clear its data.</p>
+
+            <h2><span class="num">5</span> Age requirement and children's privacy</h2>
+            <p>RealPoker contains simulated gambling and is intended for adults aged 18 and over. It is not directed at children, and we do not knowingly collect personal information from children. If you believe a child has provided information through the App, please contact us at the address below.</p>
+
+            <h2><span class="num">6</span> Data retention and deletion</h2>
+            <p>Because we do not operate a server and do not store your information, there is nothing on our side to delete. Uninstalling the App or clearing its data removes everything described in Section 4. To manage the advertising data Google collects, see Section 2.</p>
+
+            <h2><span class="num">7</span> Changes to this policy</h2>
+            <p>If this policy changes, the updated version will be published at this same address with a new effective date.</p>
+
+            <h2><span class="num">8</span> Contact</h2>
+            <p>Questions about this policy can be sent to <a href="mailto:eggstone.soft@gmail.com">eggstone.soft@gmail.com</a>.</p>
+        </section>
+
+        <section id="ko" class="lang" lang="ko">
+            <p class="lang-label">한국어</p>
+
+            <p>RealPoker("본 앱")는 Eggstone Soft("개발자")가 만든 텍사스 홀덤·세븐 포커 카드 게임입니다. 이 문서는 본 앱이 어떤 정보를 다루는지, 왜 다루는지, 누구와 공유되는지 설명합니다. Google Play로 배포되는 RealPoker 안드로이드 버전에 적용됩니다.</p>
+
+            <h2><span class="num">1</span> 수집하지 않는 정보</h2>
+            <p>RealPoker에는 회원가입, 로그인, 인앱 결제, 개발자 서버가 없습니다. 개발자는 사용자의 칩, 게임 기록, 설정, 입력한 플레이어 이름을 받거나 보거나 저장하지 않습니다. 앱 안의 칩은 실제 돈의 가치가 없으며, 구매하거나 현금·상품으로 바꿀 수 없습니다.</p>
+
+            <h2><span class="num">2</span> 광고 (Google AdMob)</h2>
+            <p>본 앱은 Google AdMob의 배너 광고, 전면 광고, 사용자가 원할 때 보는 보상형 광고를 표시합니다. 이를 위해 Google SDK가 기기의 광고 ID, IP 주소(대략적인 위치를 추정할 수 있음), 광고 반응, 진단 정보를 수집해 광고를 고르고 보여주고 측정하며 부정 행위를 막는 데 쓸 수 있습니다. 이 정보는 개발자가 아닌 Google의 개인정보 처리방침에 따라 처리됩니다.</p>
+            <p>법에서 요구하는 지역(예: 유럽경제지역, 영국)에서는 맞춤 광고를 보여주기 전에 Google의 동의 화면으로 동의를 받습니다.</p>
+            <div class="card">
+                <p>AdMob의 데이터 처리 방식은 <a href="https://policies.google.com/technologies/partner-sites?hl=ko" target="_blank" rel="noopener">"Google 서비스를 사용하는 사이트 또는 앱의 정보를 Google이 사용하는 방법"</a>과 <a href="https://policies.google.com/privacy?hl=ko" target="_blank" rel="noopener">Google 개인정보처리방침</a>에 설명되어 있습니다. 광고 ID는 기기의 설정 › Google › 광고에서 재설정하거나 삭제할 수 있습니다.</p>
+            </div>
+
+            <h2><span class="num">3</span> 권한과 사용 이유</h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr><th>권한</th><th>사용 목적</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>인터넷</td>
+                            <td>광고를 불러옵니다. 게임 자체에는 인터넷이 필요 없습니다.</td>
+                        </tr>
+                        <tr>
+                            <td>블루투스, 근처 기기 (검색·알림·연결)</td>
+                            <td>"친구와 하기"에서 Google Nearby Connections API로 친구의 폰을 찾고 연결합니다. 이 기능은 인터넷 없이 동작합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>Wi-Fi 상태</td>
+                            <td>Nearby Connections가 블루투스와 함께 폰끼리 직접 연결하는 로컬 Wi-Fi(공유기·인터넷 아님)를 더 빠른 연결 수단으로 쓸 수 있습니다.</td>
+                        </tr>
+                        <tr>
+                            <td>위치 (대략·정확)</td>
+                            <td>근처 블루투스 기기를 검색하는 앱에 안드로이드가 요구하는 권한입니다. RealPoker는 위치를 읽거나 저장하거나 보내지 않으며, "친구와 하기"를 사용할 때만 권한을 요청합니다.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>"친구와 하기" 게임 중에는 플레이어 이름과 게임 행동이 같은 게임에 참여한 폰들로 직접 전달됩니다. 이 게임 내용, 위치, 근처 기기 정보는 개발자나 제3자에게 전송되지 않습니다.</p>
+
+            <h2><span class="num">4</span> 기기에만 저장되는 정보</h2>
+            <p>본 앱은 진행 상황을 유지하기 위해 안드로이드 표준 앱 저장소에 다음 정보를 저장합니다.</p>
+            <ul>
+                <li>보유 칩, 출석 보너스 연속 일수, 게임 기록(플레이한 판, 승률, 최대 획득 팟, 최고 족보)</li>
+                <li>설정: 효과음, 진동, 게임 속도, 언어, 테이블 색, 카드 뒷면</li>
+                <li>"친구와 하기"에서 쓰는 플레이어 이름</li>
+            </ul>
+            <p>이 정보는 3번 항목에서 설명한 경우를 빼고는 기기 밖으로 나가지 않으며, 앱을 삭제하거나 앱 데이터를 지우면 함께 삭제됩니다.</p>
+
+            <h2><span class="num">5</span> 이용 연령과 아동 개인정보 보호</h2>
+            <p>RealPoker에는 도박 시뮬레이션 요소가 있어 만 18세 이상 성인을 대상으로 합니다. 아동을 대상으로 하지 않으며, 아동의 개인정보를 고의로 수집하지 않습니다. 아동이 본 앱을 통해 정보를 제공했다고 생각되면 아래 연락처로 알려 주세요.</p>
+
+            <h2><span class="num">6</span> 보관 및 삭제</h2>
+            <p>개발자는 서버를 운영하지 않고 사용자 정보를 저장하지 않으므로, 개발자 쪽에서 삭제할 정보가 없습니다. 앱을 삭제하거나 앱 데이터를 지우면 4번 항목의 정보가 모두 삭제됩니다. Google이 수집하는 광고 데이터 관리는 2번 항목을 참고해 주세요.</p>
+
+            <h2><span class="num">7</span> 정책 변경</h2>
+            <p>이 정책이 바뀌면 같은 주소에 새 시행일과 함께 갱신된 내용을 게시합니다.</p>
+
+            <h2><span class="num">8</span> 문의</h2>
+            <p>이 정책에 대한 문의는 <a href="mailto:eggstone.soft@gmail.com">eggstone.soft@gmail.com</a>으로 보내 주세요.</p>
+        </section>
+
+        <footer>
+            RealPoker Privacy Policy · Eggstone Soft · last updated November 26, 2026.
+        </footer>
+    </div>
+</body>
+</html>
